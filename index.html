@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-es">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -28,18 +28,22 @@
                 <ul class="additional_resources">
 
                     <li>
-                        <p>ENG</p>
+                        
                         <label class="switch">
-                            <span class="slider"></span>
+                            ENG
+                           <input type="checkbox" class="slider">
+                           ESP
                         </label>
-                        <p>ESP</p>
+                        
                     </li>
                     <li>
-                        <i class="fa-solid fa-moon"></i>
+                       
                         <label class="switch">
-                            <span class="slider"></span>
+                            <i class="fa-solid fa-moon"></i>
+                            <input type="checkbox" class="slider">
+                            <i class="fa-solid fa-sun"></i>
                         </label>
-                        <i class="fa-solid fa-sun"></i>
+                        
                     </li>
                     <li>
                         <a href="#">
@@ -51,27 +55,20 @@
         </nav>
 
     </header>
-    <main class="board-info-container">
-        <section class="board-info">
-
-            <h2>Welcome to Board Creation!</h2>
-            <p>This is where the magic happens. Organize your tasks and projects visually and efficiently. With just a
-                few clicks, you can:</p>
-            <ul>
-                <li><strong>Customize your boards:</strong> Bring your space to life with colors and labels that reflect
-                    your style.</li>
-                <li><strong>Group tasks by projects:</strong> Keep everything in one place and never get lost in the
-                    chaos again.</li>
-                <li><strong>Add and manage tasks easily:</strong> Add tasks, assign dates, and priorities to stay on
-                    track.</li>
-            </ul>
-            <a class="button_board" href="/board.html">
-                <div class="card">
-                    <i class="fa-solid fa-plus"></i>
-                    <h3>Create your board</h3>
-                </div>
-            </a>
-        </section>
+    <main>
+        <form>
+        <label>
+            <h3>Write your task</h3>
+            <input type="text">
+        </label>
+        <div class="inline-elements">
+            <label>
+                <h3>Assign a date</h3>
+                <input type="datetime-local">
+            </label>
+        </div>
+    </form>
+    </main>
 
     </main>
     <script src="main.js"></script>
