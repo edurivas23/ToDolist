@@ -1,131 +1,319 @@
-:root{
-    --background-section:#0E0E0E;
-    
-    --background-card: #99c3ff;
-    --letter-card:#000;
-    --border: #2d2f31;
+:root {
+    --background-header: #0E0E0E;
+    --border: #C63C51;
+    --letter: #fff;
+    --background-input: #2d2f31;
+    --button-add: #C63C51;
+    --button-deleteAll: #8C3061;
+    --button-delete: #FF4545;
+    --border-button: #000;
+    --slider: #D95F59;
+    --background-card: #2d2f31;
+    --check:lawngreen;
+
 }
 
 
 
 /* Only Homepage styles */
-html{
+html {
     color-scheme: dark light;
-    
+
 }
 
-body{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
-  
+
 
 }
 
-header{
+header {
     width: 100%;
-    background-color:var(--background-section);
+    background-color: var(--background-header);
     border-bottom: 1px solid var(--border);
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px;
     align-items: center;
-       
+
 }
-.logotype{
+
+.logotype {
     cursor: pointer;
-    font-size: 12px;
+    font-size: 1.2rem;
     white-space: nowrap;
     opacity: 0.8;
     transition: 0.2s ease;
-        & a{
-            text-decoration: none;
-            color: white;
-        }
-        &:hover{
-            opacity: 1;
-        }
+
+    & a {
+        text-decoration: none;
+        color: white;
     }
 
+    &:hover {
+        opacity: 1;
+    }
+}
 
-.additional_resources{
+
+.additional_resources {
     list-style: none;
     display: flex;
     justify-content: space-between;
     padding: 0;
     align-items: center;
-    
-    
-    
-    & li{
+
+
+
+    & li {
         display: flex;
         padding: 0 15px;
         align-items: center;
         gap: 10px;
         justify-content: center;
-       
-        & a{
+
+        & a {
             text-decoration: none;
             color: white;
         }
-        
-        & span{
-            font-size: 24px;
+
+        & span {
+            font-size: 1.5rem;
         }
-        & p{
+
+        & p {
             margin: 0;
             font-weight: 500;
             cursor: default;
         }
     }
-    
+
 }
 
-.switch{
+.switch {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
 }
+
 .slider {
     appearance: none;
     position: relative;
     display: inline-block;
-    background: #FFDDAE;
+    background: var(--slider);
     height: 1.25rem;
     width: 2.75rem;
     vertical-align: middle;
     cursor: pointer;
     border-radius: 2rem;
     transition: 0.25s linear background;
-      &.slider:checked{
-        background-color: #133E87; 
-      }
-  }
-  .slider::before {
+
+    &.slider:checked {
+        background-color: #133E87;
+    }
+}
+
+.slider::before {
     content: "";
     display: block;
     width: 1.25rem;
     height: 1.25rem;
-    background: #FBFBFB ;
+    background: #FBFBFB;
     border-radius: 1.2rem;
     position: absolute;
     box-shadow: 0px 1px 3px #0003;
     transition: 0.25s linear transform;
     transform: translateX(0rem);
-       
-  }
 
-  .slider:checked::before{
+}
+
+.slider:checked::before {
     transform: translateX(1.5rem);
 }
 
-main{
-    display:flex;
+main {
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+/* form to add tasks */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    width: 100%;
+    margin: 100px 0 50px 0;
+
+    #task_container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .tasktime_container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+}
+
+label h2 {
+    margin: 0.50rem 0;
+    text-align: start;
+}
+
+.task {
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px;
+    width: 100%;
+    align-self: center;
+    outline: none;
+
+    &:focus {
+        border-color: var(--border);
+        background-color: var(--background-input);
+    }
+}
+
+.inline-elements {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.task_time {
+
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    align-self: center;
+    outline: none;
+
+    &:focus {
+        border-color: var(--border);
+        background-color: var(--background-input);
+    }
+}
+
+.button_add {
+    background-color: var(--button-add);
+    color: var(--letter);
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+
+        opacity: 0.8;
+    }
+}
+
+.button_delete_all {
+    background-color: var(--button-deleteAll);
+    color: var(--letter);
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.task_info {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    margin: 20px 0;
+    max-width: 50vw;
+    width: 100%;
+    gap: 10px;
+    background-color: var(--background-card);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & h3 {
+        padding: 5px 0;
+
+    }
+
+    & time {
+        font-style: italic;
+        padding: 5px 0;
+    }
+}
+
+.article_buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+
+    & .complete_button {
+        background-color: transparent;
+        color: var(--letter);
+        border: none;
+        font-size: 1.3rem;
+        text-align: center;
+        transition: color 0.5s ease;
+        cursor: pointer;
+
+           &:hover{
+            color: var(--check);
+           }
+
+    }
+
+
+    & .delete_button {
+        background-color: transparent;
+        color: var(--letter);
+        border: none;
+        font-size: 1.3rem;
+        text-align: center;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+        opacity: 0.8;
+        & i {
+            background-color: var(--button-delete);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        &:hover{
+            opacity: 1;
+           }
+    }
+
+    
+
 }

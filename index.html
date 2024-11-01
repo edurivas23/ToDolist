@@ -55,19 +55,35 @@
         </nav>
 
     </header>
-    <main>
+    <main id="content">
         <form>
-        <label>
-            <h3>Write your task</h3>
-            <input type="text">
+        <label for="task" id="task_container" class="task_container">
+            <h2>Write your task</h2>
+            <input type="text" id="task" class="task" required>
         </label>
         <div class="inline-elements">
-            <label>
-                <h3>Assign a date</h3>
-                <input type="datetime-local">
+            <label for="task_time" id="tasktime_container" class="tasktime_container">
+                <h2>End date</h2>
+                <input type="datetime-local" id="task_time" class="task_time" required>
             </label>
+                <button type="button" id="button_add" class="button_add">ADD</button>
+                <button type="button" id="button_delete_all" class="button_delete_all">Delete All</button>
+            
         </div>
     </form>
+
+    <article class="task_info" id="task_info">
+        <div class="info">
+        <h3>Esperando a que salga la pelicula de haikyu</h3>
+        <time>31/10/2024 18:00 </time>
+    </div>
+    <div class="article_buttons">
+        <button type="button" id="complete_button" class="complete_button"><i class="fa-solid fa-check"></i></button>
+        <button type="button" id="delete_button" class="delete_button"><i class="fa-solid fa-trash"></i></button>
+    </div>
+    </article>
+    
+
     </main>
 
     </main>
