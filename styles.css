@@ -246,7 +246,7 @@ label h2 {
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 20px;
     border: 2px solid var(--border);
     border-radius: 10px;
     margin: 20px 0;
@@ -293,7 +293,9 @@ label h2 {
            }
 
     }
-
+    .completed{
+        color: var(--check);
+    }
 
     & .delete_button {
         background-color: transparent;
