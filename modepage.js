@@ -21,7 +21,7 @@ const loadContent = async (lenguage) => {
      $lenguage1.textContent= data[lenguage].lenguage1;
      $lenguage2.textContent= data[lenguage].lenguage2;
      $inputTextTitle.textContent= data[lenguage].inputTextTitle;
-     $inputTimeTitle.textContent= data[lenguage].inputTextTitle;
+     $inputTimeTitle.textContent= data[lenguage].inputTimeTitle;
      $buttonAdd.textContent = data[lenguage].buttonAdd;
      $buttonDeleteAll.textContent = data[lenguage].buttonDeleteAll; 
    } catch (error) {
