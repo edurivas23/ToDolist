@@ -1,4 +1,5 @@
-:root {
+:root.dark {
+    color-scheme: dark;
     --background-header: #0E0E0E;
     --border: #C63C51;
     --letter: #fff;
@@ -6,20 +7,29 @@
     --button-add: #C63C51;
     --button-deleteAll: #8C3061;
     --button-delete: #FF4545;
-    --border-button: #000;
     --slider: #D95F59;
     --background-card: #2d2f31;
     --check:lawngreen;
-
+    
 }
 
+:root.light{
+    color-scheme: light;
+    --background-header: #8CB9BD; 
+    --border: #B67352; 
+    --letter: #000; 
+    --background-input: #8CB9BD; 
+    --button-add: #ECB159; 
+    --button-deleteAll: #B67352; 
+    --button-delete: #B67352; 
+    --slider: #ECB159; 
+    --background-card: #E4E0E1  ; 
+    --check:lawngreen; 
+    --border-input:#ECB159;
+}
 
 
 /* Only Homepage styles */
-html {
-    color-scheme: dark light;
-
-}
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -53,7 +63,7 @@ nav {
 
     & a {
         text-decoration: none;
-        color: white;
+        color: var(--letter);
     }
 
     &:hover {
@@ -85,6 +95,7 @@ nav {
 
         & span {
             font-size: 1.5rem;
+            color:var(--letter);
         }
 
         & p {
@@ -103,6 +114,7 @@ nav {
     cursor: pointer;
 }
 
+
 .slider {
     appearance: none;
     position: relative;
@@ -115,9 +127,6 @@ nav {
     border-radius: 2rem;
     transition: 0.25s linear background;
 
-    &.slider:checked {
-        background-color: #133E87;
-    }
 }
 
 .slider::before {
@@ -151,8 +160,7 @@ main {
 form {
     display: flex;
     flex-direction: column;
-    max-width: 50vw;
-    width: 100%;
+    min-width: 50vw;
     margin: 100px 0 50px 0;
 
     #task_container {
@@ -176,15 +184,16 @@ label h2 {
 
 .task {
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid ;
+    border-color: var(--border-input);
     padding: 10px;
     width: 100%;
     align-self: center;
     outline: none;
-
+    background-color: var(--background-input);
     &:focus {
         border-color: var(--border);
-        background-color: var(--background-input);
+        
     }
 }
 
@@ -197,16 +206,18 @@ label h2 {
 .task_time {
 
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid ;
+    border-color: var(--border-input);
     padding: 10px;
     width: 100%;
     cursor: pointer;
     align-self: center;
     outline: none;
+    background-color: var(--background-input);
 
     &:focus {
         border-color: var(--border);
-        background-color: var(--background-input);
+        
     }
 }
 
@@ -250,11 +261,10 @@ label h2 {
     border: 2px solid var(--border);
     border-radius: 10px;
     margin: 20px 0;
-    max-width: 50vw;
-    width: 100%;
-    gap: 10px;
+    min-width: 50vw;
+    gap: 50px;
     background-color: var(--background-card);
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    
 }
 
 .info {

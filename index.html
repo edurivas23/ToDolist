@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>ToDolist</title>
+    <title>To DoO!</title>
 </head>
 
 <body>
@@ -28,25 +28,25 @@
                 <ul class="additional_resources">
 
                     <li>
-                        
+
                         <label class="switch">
-                            ENG
-                           <input type="checkbox" class="slider">
-                           ESP
+                            <p id="lenguage1"></p>
+                            <input type="checkbox" class="slider" id="lenguage">
+                            <p id="lenguage2"></p>
                         </label>
-                        
+
                     </li>
                     <li>
-                       
+
                         <label class="switch">
                             <i class="fa-solid fa-moon"></i>
-                            <input type="checkbox" class="slider">
+                            <input type="checkbox" class="slider" id="color">
                             <i class="fa-solid fa-sun"></i>
                         </label>
-                        
+
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://github.com/edurivas23/ToDolist">
                             <span class="fa-brands fa-github"></span>
                         </a>
                     </li>
@@ -56,26 +56,25 @@
 
     </header>
     <main id="content">
-        <form>
-        <label for="task" id="task_container" class="task_container">
-            <h2>Write your task</h2>
-            <input type="text" id="task" class="task" required>
-        </label>
-        <div class="inline-elements">
-            <label for="task_time" id="tasktime_container" class="tasktime_container">
-                <h2>End date</h2>
-                <input type="datetime-local" id="task_time" class="task_time" required>
+        <form id="content_container">
+            <label for="task" id="task_container" class="task_container">
+                <h2 id="inputTextTitle"></h2>
+                <input type="text" id="task" class="task" required>
             </label>
-                <button type="button" id="button_add" class="button_add">ADD</button>
-                <button type="button" id="button_delete_all" class="button_delete_all">Delete All</button>
-            
-        </div>
-    </form>
-    
-    </main>
+            <div class="inline-elements">
+                <label for="task_time" id="tasktime_container" class="tasktime_container">
+                    <h2 id="inputTimeTitle"></h2>
+                    <input type="datetime-local" id="task_time" class="task_time" required>
+                </label>
+                <button type="button" id="buttonAdd" class="button_add"></button>
+                <button type="button" id="buttonDeleteAll" class="button_delete_all"></button>
+
+            </div>
+        </form>
 
     </main>
-    <script src="main.js"></script>
+    <script src="modepage.js"></script>
+    <script src="tasks.js"></script>
 </body>
 
 </html>
