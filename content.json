@@ -1,0 +1,20 @@
+{
+    "en": {
+        "lenguage1": "ENG",
+        "lenguage2": "SPA",
+        "inputTextTitle": "Write your task",
+        "inputTimeTitle": "End date",
+        "buttonAdd": "ADD",
+        "buttonDeleteAll": "Delete All",
+        "alert": "complete all fields"
+    },
+    "es": {
+        "lenguage1": "ING",
+        "lenguage2": "ESP",
+        "inputTextTitle": "Escribe tu tarea",
+        "inputTimeTitle": "Fecha de finalización",
+        "buttonAdd": "AÑADIR",
+        "buttonDeleteAll": "Eliminar Todo",
+        "alert": "complete todos los campos"
+    }
+}
